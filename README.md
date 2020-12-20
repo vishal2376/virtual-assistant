@@ -19,6 +19,16 @@
 
  - Now your application is ready to use.
 
+## Features of virtual assistant[hydron]
+ - All commands are easy to use and straight forward.
+ - Greeting user according to the time.
+ - It can play any song.
+ - It can search any questions directly with Google.
+ - It can take you to the direct links of pdf , songs and movies.
+ - It can directly shutdown or restart the system.
+ - Not harm any file in the system.
+ - User friendly. 
+
 ## Watch tutorial on : 
  - [Youtube](https://www.youtube.com/watch?v=pbnQJsbWYNA&feature=youtu.be)
  - [Website](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/) 

@@ -1,11 +1,13 @@
 /*
 ----------------------------------------------------------------------------
-               Project title : hydron(virtual assistant)
-               Made By       : Vishal Singh
-               Written in    : c++ and vbs(few lines)
-               Start project : 27 December , 2018
-               Platform      : Windows (only)
-               IDE used      : Codeblocks
+               Project title   : Hydron(virtual assistant)
+               Made By         : Vishal Singh
+               Written in      : C++
+               Started project : 27 December , 2018
+               Platform        : Windows
+               IDE used        : Codeblocks
+               Last Modified   : 20 December , 2020
+               Total Code      : 700+ Lines
  ----------------------------------------------------------------------------
 */
 
@@ -112,4 +114,3 @@ assistant::~assistant()
 {
     system("attrib +s +h data");
 }
-

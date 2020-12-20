@@ -1,11 +1,13 @@
 /*
 ----------------------------------------------------------------------------
-               Project title : hydron(virtual assistant)
-               Made By       : Vishal Singh
-               Written in    : c++ and vbs(few lines)
-               Start project : 27 December , 2018
-               Platform      : Windows
-               IDE used      : Codeblocks
+               Project title   : Hydron(virtual assistant)
+               Made By         : Vishal Singh
+               Written in      : C++
+               Started project : 27 December , 2018
+               Platform        : Windows
+               IDE used        : Codeblocks
+               Last Modified   : 20 December , 2020
+               Total Code      : 700+ Lines
  ----------------------------------------------------------------------------
 */
 
@@ -31,7 +33,7 @@ string input;
 int pos ,l_pos,cnt=0;
 string m_word ,s_word;
 int s_count=0;
-assistant x; //    object
+assistant x; //  main  object
 
 //---------------------all functions-------------------------
 
@@ -72,9 +74,9 @@ void repeat()
 getline(cin,input);   // get command from user
 
 pos = input.find(" ");
-m_word = input.substr(0,pos);
+m_word = input.substr(0,pos); //main command word
 l_pos = input.find('\0');
-s_word = input.substr(pos+1,l_pos);
+s_word = input.substr(pos+1,l_pos); //rest word
 
 
 //-----------check conditions--------------//
@@ -580,4 +582,3 @@ cout << setfill(' ') << setw(75) <<"   11.shutdown/restart       \n";
 cout << setfill(' ') << setw(75) <<"   12.install                \n";
 system("pause");
 }
-

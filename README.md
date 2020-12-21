@@ -1,5 +1,20 @@
 # Virtual Assistant [Hydron]
 
+<p align="center">
+  <a href="https://github.com/vishal2376/virtual-assistant/issues">
+    <img src="https://img.shields.io/github/issues/vishal2376/virtual-assistant"/> 
+  </a>
+  <a href="https://github.com/vishal2376/virtual-assistant/network/members">
+    <img src="https://img.shields.io/github/forks/vishal2376/virtual-assistant"/> 
+  </a>  
+  <a href="https://github.com/vishal2376/virtual-assistant/stargazers">
+    <img src="https://img.shields.io/github/stars/vishal2376/virtual-assistant"/> 
+  </a>
+    <a href="https://github.com/vishal2376/virtual-assistant/LICENSE">
+    <img src="https://img.shields.io/github/license/vishal2376/virtual-assistant"/> 
+  </a>
+</p>
+
 ## Download link  : [Hydron Virtual assistant](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/)
 
 ## How to Contribute :

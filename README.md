@@ -1,6 +1,6 @@
 # Virtual Assistant [Hydron]
 
-<p align="center">
+<p>
   <a href="https://github.com/vishal2376/virtual-assistant/issues">
     <img src="https://img.shields.io/github/issues/vishal2376/virtual-assistant"/> 
   </a>

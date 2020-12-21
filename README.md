@@ -7,7 +7,7 @@
   <a href="https://github.com/vishal2376/virtual-assistant/stargazers">
     <img src="https://img.shields.io/github/stars/vishal2376/virtual-assistant"/> 
   </a>
-    <a href="https://github.com/vishal2376/virtual-assistant/LICENSE">
+    <a href="https://github.com/vishal2376/virtual-assistant/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/vishal2376/virtual-assistant"/> 
   </a>
 </p>

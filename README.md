@@ -41,6 +41,9 @@
  - Not harm any file in the system.
  - User friendly. 
 
+## All Command of hydron :
+ - [click here](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/#commands) 
+
 ## Watch tutorial on : 
  - [Youtube](https://www.youtube.com/watch?v=pbnQJsbWYNA&feature=youtu.be)
  - [Website](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/) 

@@ -41,7 +41,7 @@
  - Not harm any file in the system.
  - User friendly. 
 
-## All Command of hydron :
+## All Commands of virtual assistant[hydron] :
  - [Click here](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/#commands) 
 
 ## Watch tutorial on : 

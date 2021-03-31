@@ -51,6 +51,8 @@
 ## More projects : 
    
   - [Website Designs](https://github.com/vishal2376/Website-Design)
+  - [C++ Mini Projects](https://github.com/vishal2376/cpp-mini-projects) 
+  - [Password Generator](https://github.com/vishal2376/password-generator) 
 
 ## Contact :  
   - [Instagram](https://www.instagram.com/vishal_2376/)

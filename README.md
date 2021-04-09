@@ -26,16 +26,16 @@
 ## How to setup and run code:
   
   - First install [Codeblocks](https://www.codeblocks.org/downloads/binaries/)  
-  - Now [Download files](https://github.com/vishal2376/virtual-assistant/archive/refs/heads/master.zip) OR Type the following command in your terminal / git bash.
+  - Now Dowload files OR type the following command in **Terminal / Git bash**.
   
-  ```bash:
-  git clone https://github.com/vishal2376/virtual-assistant.git
-  ```
+       ```bash:
+        git clone https://github.com/vishal2376/virtual-assistant.git
 
  - Open the folder and click on **hydron.cbp**
  - Now you can see all files in sidebar.
- - Click on main.cpp and **Run**
-   > Shortcut key to Run files **Press F9**.
+ - Compile , Run and enjoy :)
+
+   > Shortcut : **Press F9** to compile and run together.
   
 ## Features of virtual assistant[hydron]
  - All commands are easy to use and straight forward.

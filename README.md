@@ -28,8 +28,10 @@
   - First install [Codeblocks](https://www.codeblocks.org/downloads/binaries/)  
   - Now Dowload files OR type the following command in **Terminal / Git bash**.
   
-   > **git clone https://github.com/vishal2376/virtual-assistant.git**
-  
+  ```
+   **git clone https://github.com/vishal2376/virtual-assistant.git**
+  ```
+ 
  - Open the folder and click on **hydron.cbp**
  - Now you can see all files in the **Sidebar of Codeblocks**.
  - Compile , Run and enjoy :)

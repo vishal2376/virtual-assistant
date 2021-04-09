@@ -14,15 +14,7 @@
 
 ## Download link  : [Hydron Virtual assistant](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/)
 
-## How to Contribute :
-
-- **Fork** this repository.
-- Edit/Add your contribution in **Forked repository**.
-- Goto **Pull Request** tab and do a **New pull request**.
-- Click on **Create Pull Request**. 
-
-
-## How to install :
+## How to run application:
  - **Download** the application from above link.
  - After extract file , open the folder and click on hydron.exe.
  - Now type the command.
@@ -31,6 +23,20 @@
 
  - Now your application is ready to use.
 
+## How to setup and run code:
+  
+  - First install [Codeblocks](https://www.codeblocks.org/downloads/binaries/)  
+  - Now [Download files](https://github.com/vishal2376/virtual-assistant/archive/refs/heads/master.zip) OR Type the following command in your terminal / git bash.
+  
+  ```bash:
+  git clone https://github.com/vishal2376/virtual-assistant.git
+  ```
+
+ - Open the folder and click on **hydron.cbp**
+ - Now you can see all files in sidebar.
+ - Click on main.cpp and **Run**
+   > Shortcut key to Run files **Press F9**.
+  
 ## Features of virtual assistant[hydron]
  - All commands are easy to use and straight forward.
  - Greeting user according to the time.

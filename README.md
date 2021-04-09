@@ -19,7 +19,7 @@
  - After extract file , open the folder and click on hydron.exe.
  - Now type the command.
   
-  > `install`
+   > install
 
  - Now your application is ready to use.
 
@@ -28,11 +28,12 @@
   - First install [Codeblocks](https://www.codeblocks.org/downloads/binaries/)  
   - Now Dowload files OR type the following command in **Terminal / Git bash**.
   
-       ```bash:
-        git clone https://github.com/vishal2376/virtual-assistant.git
+   ```bash:
+     git clone https://github.com/vishal2376/virtual-assistant.git
+   ```
 
  - Open the folder and click on **hydron.cbp**
- - Now you can see all files in sidebar.
+ - Now you can see all files in the **Sidebar of Codeblocks**.
  - Compile , Run and enjoy :)
 
    > Shortcut : **Press F9** to compile and run together.
@@ -63,3 +64,4 @@
 ## Contact :  
   - [Instagram](https://www.instagram.com/vishal_2376/)
   - [Telegram](https://t.me/vishal2376/)
+  - [Join Telegram group](https://t.me/cppwithtricks)

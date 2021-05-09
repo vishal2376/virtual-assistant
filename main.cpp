@@ -253,7 +253,7 @@ void check()
             }
       else
        {
-         x.speak("Sorry Vishaal, unknown comaand...");
+         x.speak("Sorry Vishaal, unknown command...");
          cnt++;
          if(cnt>=3)
          {  Sleep(600);

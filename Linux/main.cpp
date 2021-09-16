@@ -16,7 +16,7 @@
 
 #include "assistant.h"
 
-
+#define t_const 1000
 //------------------global variables----------------
 string input;
 
@@ -57,7 +57,7 @@ int main()
 void repeat()
 {
   system("color a");
-  system("cls");
+  system("clear");
   x.clock();
   cout << " \n\n\nType Here  ---> ";
   cin.clear();
@@ -95,18 +95,18 @@ void check()
 
   else if (m_word == "update" || m_word == "updating")
   {
-    system("cls");
+    system("clear");
     line();
     x.typing("Updating the song list...");
-    Sleep(100);
-    system("cls");
+    usleep(t_const * 100);
+    system("clear");
     line();
     x.typing("Please wait");
     update_song("punjabi");
     update_song("english");
     update_song("hindi");
     update_song("others");
-    system("cls");
+    system("clear");
     remove("data\\songs.txt");
     rename("data\\temp.txt", "data\\songs.txt");
     line();
@@ -115,10 +115,10 @@ void check()
   else if (input == "exit" || input == "q" || input == "quit")
   {
     x.speak("Good bye, Vishaal");
-    Sleep(600);
+    usleep(t_const * 600);
     cout << "\n\n\n\n\n\n\t\t\t\t\t";
     x.typing("Created By : Vishal Singh");
-    Sleep(1500);
+    usleep(t_const * 1500);
     exit(1);
   }
   else if (input == "find ip" || input == "find my ip" || m_word == "ip")
@@ -137,7 +137,7 @@ void check()
       system("shutdown /s");
     else
       system("shutdown /r");
-    Sleep(10);
+    usleep(t_const * 10);
     exit(1);
   }
 
@@ -150,16 +150,16 @@ void check()
     else if (input == "who are you" || input == "who created you" || input == "who made you")
     {
       x.typing("I am Hydron, a virtual assistant");
-      Sleep(300);
+      usleep(t_const * 300);
       line();
       x.typing("Vishal singh has made me.");
-      Sleep(300);
+      usleep(t_const * 300);
       line();
       x.typing("I was created on 27 December ,2018");
-      Sleep(300);
+      usleep(t_const * 300);
       line();
       x.typing("and he's making me better day by day");
-      Sleep(300);
+      usleep(t_const * 300);
     }
     else
       srch(input);
@@ -175,13 +175,13 @@ void check()
     install("punjabi");
     install("others");
     cout << "Creating folders...";
-    Sleep(200);
+    usleep(t_const * 200);
     cout << "Creating files...";
-    Sleep(200);
-    system("cls");
+    usleep(t_const * 200);
+    system("clear");
 
     x.typing("All files are installed");
-    Sleep(300);
+    usleep(t_const * 300);
   }
 
   else if (m_word == "movie")
@@ -246,11 +246,11 @@ void check()
     x.speak("Sorry Vishaal, unknown command...");
     cnt++;
     if (cnt >= 3)
-    { Sleep(600);
+    { usleep(t_const * 600);
       x.speak("I think ");
-      Sleep(500);
+      usleep(t_const * 500);
       x.speak("you are a new user");
-      Sleep(600);
+      usleep(t_const * 600);
       x.speak("You need some help...");
       help();
       //x.typing("do you want some tutorial(y/n)");
@@ -258,7 +258,7 @@ void check()
     }
   }
 
-  Sleep(700);
+  usleep(t_const * 700);
   repeat();
 }
 
@@ -277,7 +277,7 @@ void player(string item)
     if (song == item)
     {
       x.typing("Playing the song ");
-      Sleep(150);
+      usleep(t_const * 150);
       x.typing(song_name);
       strcat(path, singer);
       strcat(path, "\\");
@@ -294,10 +294,10 @@ void player(string item)
     x.typing(" not found.");
     if (s_count % 3 == 0)
     {
-      Sleep(200);
-      system("cls");
+      usleep(t_const * 200);
+      system("clear");
       x.speak("But you can download the song by using the command");
-      Sleep(1300);
+      usleep(t_const * 1300);
       line();
       x.typing("song ");
       x.typing(song_name);
@@ -325,7 +325,7 @@ void update_song(string name)
 {
   fstream a, b;
   char word[20], old[20];
-  system("cls");
+  system("clear");
   a.open("My_beat\\" + name + "\\list.txt");
   b.open("data\\temp.txt", ios::app | ios::ate);
   while (a >> word)
@@ -344,7 +344,7 @@ void displayClock(int seconds)
   int h, m;
   h = m = 0;
   // system call to clear the screen
-  system("cls");
+  system("clear");
   cout << "\n\n";
   cout << setfill(' ') << setw(75) << "	        TIMER	      	\n";
   cout << setfill(' ') << setw(75) << " --------------------------\n";
@@ -360,7 +360,7 @@ void shutdown_timer(int t)
   while (t)
   {
     displayClock(t);
-    Sleep(900);
+    usleep(t_const * 900);
     t--;
   }
 }
@@ -375,26 +375,26 @@ void srch(string query, string extra)
       query[i] = '+';
   }
 
-  Sleep(200);
-  system("cls");
+  usleep(t_const * 200);
+  system("clear");
   line();
   x.typing("Cheking internet connection...");
   if (s_count % 5 == 0)
   {
     line();
-    Sleep(90);
+    usleep(t_const * 90);
     cout << "Colleting information..\n";
-    Sleep(50);
+    usleep(t_const * 50);
     cout << "securing the data..\n";
-    Sleep(30);
+    usleep(t_const * 30);
     cout << "clear the cookies..\n";
-    Sleep(100);
+    usleep(t_const * 100);
     system("ipconfig");
     line();
     x.typing("All protocols are secured...");
   }
 
-  Sleep(250);
+  usleep(t_const * 250);
   x.speak("Connecting to your browser.");
   string url;
 
@@ -410,7 +410,7 @@ void srch(string query, string extra)
     url = "start https://en.muzmo.org/search?q=";
     url += query;
     system(string(url).c_str());
-    Sleep(50);
+    usleep(t_const * 50);
 
     url = "start https://m.soundcloud.com/search?q=";
     url += query;
@@ -422,7 +422,7 @@ void srch(string query, string extra)
     url += query;
     url += "+djpunjab";
     system(string(url).c_str());
-    Sleep(50);
+    usleep(t_const * 50);
   }
   else if (extra == "pdf")
   {
@@ -498,27 +498,27 @@ void lists(string link)
 //----------------------hacking zone------------------
 void hacking()
 {
-  system("cls");
+  system("clear");
   system("color f");
   x.speak("You are Welcome in the Hacking Lab");
   cout << setfill(' ') << setw(50) << "      ________       \n";
-  Sleep(100);
+  usleep(t_const * 100);
   cout << setfill(' ') << setw(50) << "     |        |      \n";
-  Sleep(100);
+  usleep(t_const * 100);
   cout << setfill(' ') << setw(50) << "     |  #   # |      \n";
-  Sleep(100);
+  usleep(t_const * 100);
   cout << setfill(' ') << setw(50) << "     |  #   # |      \n";
-  Sleep(100);
+  usleep(t_const * 100);
   cout << setfill(' ') << setw(50) << "     |   # #  |      \n";
-  Sleep(100);
+  usleep(t_const * 100);
   cout << setfill(' ') << setw(50) << "     |    #   |      \n";
-  Sleep(100);
+  usleep(t_const * 100);
   cout << setfill(' ') << setw(50) << "     |________|      \n";
   line();
-  Sleep(1000);
+  usleep(t_const * 1000);
   system("color c");
   cout << setfill(' ') << setw(50) << " Vishal Hacking Lab  \n";
-  Sleep(1000);
+  usleep(t_const * 1000);
   line();
   x.typing("Still in development...");
 }
@@ -547,7 +547,7 @@ void help()
 {
   cnt = 0;
   x.speak("you can use only these cammands");
-  system("cls");
+  system("clear");
   cout << "\n\n";
   system("color f");
   line();

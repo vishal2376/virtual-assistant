@@ -16,43 +16,33 @@
 
 #include "assistant.h"
 
-
+#define t_const 1000
 
 string greet;
 //--------------constructor---------------
 assistant::assistant()
 {
-
-  system("md data");
-  system("attrib +s +h data");
-  system("cls");
-  system("title   Hydron");
-
+  system("clear");
 }
 
 //----------greeting function--------------
 void assistant::greeting()
 {
-  system("color a");
   cout << "\n\n\n\n\n\n\n\t\t\t\t\t\t";
   cout << "Welcome to the Hydron ";
-  Sleep(300);
+  usleep(t_const * 300);
   speak(greet);
-  system("color 0c");
-  Sleep(400);
+  usleep(t_const * 400);
 }
 
 //--------------speak function--------------
 void assistant::speak(string s)
 {
-  ofstream file;
-  file.open("data//speak.vbs", ios::out);
-  file << "dim s";
-  file << "\nset s = createObject(\"sapi.spvoice\")";
-  file << "\ns.speak \"" << s << "\"";
-  file.close();
-  system("start data//speak.vbs");
-  Sleep(300);
+  string cmd = "espeak \"";
+  cmd += s;
+  cmd += "\"";
+  system(cmd.c_str());
+  usleep(t_const * 300);
 }
 
 //---------------typing function--------------
@@ -61,8 +51,8 @@ void assistant::typing(string t)
   speak(t);   //----------for speaking the text
   for (int i = 0; t[i] != '\0'; i++)
   {
-    cout << t[i];
-    Sleep(65);
+    cout << t[i] << flush;
+    usleep(65 * 1000);
   }
 
 }
@@ -93,7 +83,7 @@ void assistant::clock()
   else
     cout << " (" << DAYS[ltm->tm_wday - 1] << ")";
   greet += " Vishal";
-  cout << "\t\t\t\t\t\t\t\t\t";
+  cout << "\t\t\t\t\t\t";
   cout << greet;
   cout << "\n   Time:-" << ( ltm->tm_hour <= 12 ? ltm->tm_hour : ltm->tm_hour - 12);
   cout << ":" << ltm->tm_min << (ltm->tm_hour < 12 ? "am" : "pm");
@@ -105,5 +95,5 @@ void assistant::clock()
 
 assistant::~assistant()
 {
-  system("attrib +s +h data");
+
 }

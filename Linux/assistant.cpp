@@ -28,8 +28,7 @@ assistant::assistant()
 //----------greeting function--------------
 void assistant::greeting()
 {
-  cout << "\n\n\n\n\n\n\n\t\t\t\t\t\t";
-  cout << "Welcome to the Hydron ";
+  cout << "\n";
   usleep(t_const * 300);
   speak(greet);
   usleep(t_const * 400);
@@ -48,7 +47,7 @@ void assistant::speak(string s)
 //---------------typing function--------------
 void assistant::typing(string t)
 {
-  speak(t);   //----------for speaking the text
+  speak(t);   //---------- speaking the text
   for (int i = 0; t[i] != '\0'; i++)
   {
     cout << t[i] << flush;
@@ -83,7 +82,7 @@ void assistant::clock()
   else
     cout << " (" << DAYS[ltm->tm_wday - 1] << ")";
   greet += " Vishal";
-  cout << "\t\t\t\t\t\t";
+  cout << "\t\t\t\t\t";
   cout << greet;
   cout << "\n   Time:-" << ( ltm->tm_hour <= 12 ? ltm->tm_hour : ltm->tm_hour - 12);
   cout << ":" << ltm->tm_min << (ltm->tm_hour < 12 ? "am" : "pm");

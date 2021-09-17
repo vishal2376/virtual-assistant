@@ -20,7 +20,9 @@ string greet;
 //--------------constructor---------------
 assistant::assistant()
 {
+  system("mkdir data");
   system("clear");
+
 }
 
 //----------greeting function--------------
@@ -49,7 +51,7 @@ void assistant::typing(string t)
   for (int i = 0; t[i] != '\0'; i++)
   {
     cout << t[i] << flush;
-    usleep(65 * 1000);
+    usleep(20000);
   }
 
 }

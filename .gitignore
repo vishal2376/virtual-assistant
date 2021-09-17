@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 */bin/
 */data/
 */obj/
@@ -6,3 +7,10 @@ Linux/*.o
 Linux/hydron
 Linux/main
 Linux/assistant
+=======
+bin/
+data/
+obj/
+Linux/*.o
+Linux/hydron
+>>>>>>> linux

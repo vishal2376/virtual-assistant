@@ -23,10 +23,11 @@
 
  - Now your application is ready to use.
 
-## Setup and run code:
+## Build instructions:
   
-### Windows [click here](Windows)
-### Linux [click here](Linux)
+### Windows [click here](https://github.com/vishal2376/virtual-assistant/tree/master/Windows)
+
+### Linux [click here](https://github.com/vishal2376/virtual-assistant/tree/master/Linux)
   
 ## Features of virtual assistant[hydron]
  - All commands are easy to use and straight forward.

@@ -4,11 +4,9 @@
                Made By         : Vishal Singh
                Written in      : C++
                Started project : 27 December , 2018
-               Platform        : Windows
-               IDE used        : Codeblocks
-               Last Modified   : 20 December , 2020
+               Platform        : Linux
                Total Code      : 700+ Lines
- ----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 */
 
 

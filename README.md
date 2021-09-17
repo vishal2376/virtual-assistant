@@ -25,8 +25,8 @@
 
 ## Setup and run code:
   
-  Windows [click here](Windows)
-  Linux [click here](Linux)
+### Windows [click here](Windows)
+### Linux [click here](Linux)
   
 ## Features of virtual assistant[hydron]
  - All commands are easy to use and straight forward.

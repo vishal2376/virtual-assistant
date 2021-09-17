@@ -23,20 +23,10 @@
 
  - Now your application is ready to use.
 
-## How to setup and run code:
+## Setup and run code:
   
-  - First install [Codeblocks](https://www.codeblocks.org/downloads/binaries/)  
-  - Now Dowload files OR type the following command in **Terminal / Git bash**.
-  
-  ```
-    git clone https://github.com/vishal2376/virtual-assistant.git
-  ```
- 
- - Open the folder and click on **hydron.cbp**
- - Now you can see all files in the **Sidebar of Codeblocks**.
- - Compile , Run and enjoy :)
-
-   > Shortcut : **Press F9** to compile and run together.
+  Windows [click here](Windows)
+  Linux [click here](Linux)
   
 ## Features of virtual assistant[hydron]
  - All commands are easy to use and straight forward.

@@ -47,12 +47,12 @@ void assistant::speak(string s)
 //---------------typing function--------------
 void assistant::typing(string t)
 {
-  speak(t);   //---------- speaking the text
   for (int i = 0; t[i] != '\0'; i++)
   {
     cout << t[i] << flush;
     usleep(20000);
   }
+  speak(t);   //---------- speaking the text
 
 }
 

@@ -94,7 +94,6 @@ void check()
   else if (m_word == "update" || m_word == "updating")
   {
     system("clear");
-    system("mkdir My_beat");
     line();
     x.typing("Updating the song list...");
     usleep(t_const * 100);
@@ -169,17 +168,19 @@ void check()
 
   else if (input == "install")
   {
+    system("mkdir My_beat");
+
     install("hindi");
     install("english");
     install("punjabi");
     install("others");
-    cout << "Creating folders...";
+    cout << "\nCreating folders...";
     usleep(t_const * 200);
-    cout << "Creating files...";
+    cout << "\nCreating files...";
     usleep(t_const * 200);
     system("clear");
 
-    x.typing("All files are installed");
+    x.typing("\nAll files are installed");
     usleep(t_const * 300);
   }
 

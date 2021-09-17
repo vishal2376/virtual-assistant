@@ -25,7 +25,7 @@
   
 ### Using makefile
 
-  - Type the following command in **CMD**.
+  - Type the following command in **Terminal**.
   
   ```
     git clone https://github.com/vishal2376/virtual-assistant.git

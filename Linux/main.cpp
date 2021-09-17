@@ -3,7 +3,7 @@
                Project title   : Hydron(virtual assistant)
                Made By         : Vishal Singh
                Written in      : C++
-               Started project : 27 December , 2018
+               started project : 27 December , 2018
                Platform        : Linux
                Total Code      : 700+ Lines
 ----------------------------------------------------------------------------
@@ -94,6 +94,7 @@ void check()
   else if (m_word == "update" || m_word == "updating")
   {
     system("clear");
+    system("mkdir My_beat");
     line();
     x.typing("Updating the song list...");
     usleep(t_const * 100);
@@ -105,8 +106,8 @@ void check()
     update_song("hindi");
     update_song("others");
     system("clear");
-    remove("data\\songs.txt");
-    rename("data\\temp.txt", "data\\songs.txt");
+    remove("data/songs.txt");
+    rename("data/temp.txt", "data/songs.txt");
     line();
     x.typing("All songs are updated in the file");
   }
@@ -205,7 +206,7 @@ void check()
   else if (m_word == "list")
   {
     if (s_word == "all songs" || s_word == "songs")
-      lists("data\\songs.txt");
+      lists("data/songs.txt");
   }
   /*else if(input=="unhide data"||input=="unhide data folder")
         {
@@ -230,11 +231,11 @@ void check()
   {
     if (s_word == "chrome" || s_word == "google chrome")
     {
-      system("start chrome");
+      system("chrome");
     }
     else if (s_word == "mozilla" || s_word == "firefox")
     {
-      system("start firefox");
+      system("firefox");
     }
     else
       openf(s_word);
@@ -268,8 +269,8 @@ void player(string item)
   song_name = item;
   convert(item);
   char song[30], singer[30];
-  char path[90] = "start My_beat\\";
-  file.open("data\\songs.txt", ios::app);
+  char path[90] = "xdg-open My_beat/";
+  file.open("data/songs.txt", ios::app);
   while (file >> song >> singer)
   {
     if (song == item)
@@ -278,7 +279,7 @@ void player(string item)
       usleep(t_const * 150);
       x.typing(song_name);
       strcat(path, singer);
-      strcat(path, "\\");
+      strcat(path, "/");
       strcat(path, song);
       strcat(path, ".mp3");
       system(path);
@@ -324,8 +325,8 @@ void update_song(string name)
   fstream a, b;
   char word[20], old[20];
   system("clear");
-  a.open("My_beat\\" + name + "\\list.txt");
-  b.open("data\\temp.txt", ios::app | ios::ate);
+  a.open("My_beat/" + name + "/list.txt");
+  b.open("data/temp.txt", ios::app | ios::ate);
   while (a >> word)
   {
     b << word << " " << name << "\n";
@@ -398,25 +399,25 @@ void srch(string query, string extra)
 
   if (extra == "youtube")
   {
-    url = "start https://www.youtube.com/results?search_query=";
+    url = "xdg-open https://www.youtube.com/results?search_query=";
     url += query;
     system(string(url).c_str());
   }
   else if (extra == "song")
   {
     // for international songs
-    url = "start https://en.muzmo.org/search?q=";
+    url = "xdg-open https://en.muzmo.org/search?q=";
     url += query;
     system(string(url).c_str());
     usleep(t_const * 50);
 
-    url = "start https://m.soundcloud.com/search?q=";
+    url = "xdg-open https://m.soundcloud.com/search?q=";
     url += query;
     system(string(url).c_str());
 
     //only for hindi and punjabi songs
 
-    url = "start https://www.google.com/search?q=";
+    url = "xdg-open https://www.google.com/search?q=";
     url += query;
     url += "+djpunjab";
     system(string(url).c_str());
@@ -424,21 +425,21 @@ void srch(string query, string extra)
   }
   else if (extra == "pdf")
   {
-    url = "start https://www.google.com/search?q=filetype%3Apdf+";
+    url = "xdg-open https://www.google.com/search?q=filetype%3Apdf+";
     url += query;
     system(string(url).c_str());
   }
   else if (extra == "movie")
   {
 
-    url = "start https://www.google.com/search?q=";
+    url = "xdg-open https://www.google.com/search?q=";
     url += query;
     url += "+-inurl%3A(htm%7Chtml%7Cphp%7Cpls%7Ctxt)+intitle%3Aindex.of+%22last+modified%22(mp4%7Cmkv%7Cwma%7Caac%7Cavi)";
     system(string(url).c_str());
   }
   else
   {
-    url = "start https://www.google.com/search?q=";
+    url = "xdg-open https://www.google.com/search?q=";
     url += query;
     system(string(url).c_str());
   }
@@ -456,14 +457,14 @@ void install(string fold)
 {
   fstream file;
   string foldname, filename;
-  foldname = "md My_beat\\";
+  foldname = "mkdir My_beat/";
 
   foldname += fold;
   system(string(foldname).c_str());
 
-  filename = "My_beat\\";
+  filename = "My_beat/";
   filename += fold;
-  filename += "\\list.txt";
+  filename += "/list.txt";
   file.open(filename, ios::app);
   file.close();
 }
@@ -524,7 +525,7 @@ void hacking()
 void block(string website)
 {
   fstream file;
-  file.open("C:\\WINDOWS\\system32\\drivers\\etc\\hosts", ios::app);
+  file.open("C:/WINDOWS/system32/drivers/etc/hosts", ios::app);
   file << "\n127.0.0.2 www." << website;
   x.typing("Blocking the website..");
   file.close();
@@ -532,7 +533,7 @@ void block(string website)
 
 void openf(string location)
 {
-  string path = "start ", item = location;
+  string path = "xdg-open ", item = location;
   convert(item);
   path += item;
   x.typing("Open....");

@@ -287,6 +287,8 @@ void player(string item)
       break;
     }
   }
+  usleep(t_const * 150);
+  system("clear");
   //--------------if song not found------------------
   if (song != item)
   {

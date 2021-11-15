@@ -12,7 +12,7 @@
   </a>
 </p>
 
-## Download link  : [Hydron Virtual assistant](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/)
+## Download link  : [Hydron Virtual assistant](https://github.com/vishal2376/virtual-assistant/releases/tag/v1.0.0)
 
 ## How to run application:
  - **Download** the application from above link.

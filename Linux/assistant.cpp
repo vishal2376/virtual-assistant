@@ -40,20 +40,26 @@ void assistant::speak(string s)
   string cmd = "espeak \"";
   cmd += s;
   cmd += "\"";
+
   system(cmd.c_str());
-  usleep(t_const * 300);
+
+  // thread th(system, cmd.c_str());
+
 }
 
 //---------------typing function--------------
 void assistant::typing(string t)
 {
+
+  thread th(&assistant::speak, this , t); //using thread for TTS
+
   for (int i = 0; t[i] != '\0'; i++)
   {
     cout << t[i] << flush;
-    usleep(20000);
+    usleep(40000); // speed 30ms
   }
-  speak(t);   //---------- speaking the text
 
+  th.join();//finish thread after complete TTS (text to speech)
 }
 
 //-------------------clock function--------------

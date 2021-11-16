@@ -13,11 +13,10 @@
 </p>
 
 ## Download links : 
+- [Linux(latest version)](https://github.com/vishal2376/virtual-assistant/releases)
 
-### [Windows(v1.0.0)](https://github.com/vishal2376/virtual-assistant/releases/tag/v1.0.0)
-  - >:warning: Window version is no longer under development. 
-
-### [Linux(latest version)](https://github.com/vishal2376/virtual-assistant/releases)
+- [Windows(v1.0.0)](https://github.com/vishal2376/virtual-assistant/releases/tag/v1.0.0)
+> :warning: Window version is no longer under development. 
 
 ## Build instructions:
   

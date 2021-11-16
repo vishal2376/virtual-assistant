@@ -12,16 +12,12 @@
   </a>
 </p>
 
-## Download link  : [Hydron Virtual assistant](https://github.com/vishal2376/virtual-assistant/releases/tag/v1.0.0)
+## Download links : 
 
-## How to run application:
- - **Download** the application from above link.
- - After extract file , open the folder and click on hydron.exe.
- - Now type the command.
-  
-   > install
+### [Windows(v1.0.0)](https://github.com/vishal2376/virtual-assistant/releases/tag/v1.0.0)
+    > :warning: Window version is no longer under development. 
 
- - Now your application is ready to use.
+### [Linux(latest version)](https://github.com/vishal2376/virtual-assistant/releases)
 
 ## Build instructions:
   
@@ -42,7 +38,7 @@
 ## All Commands of virtual assistant[hydron] :
  - [Click here](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/#commands) 
 
-## Watch tutorial on : 
+## How to use : 
  - [Youtube](https://www.youtube.com/watch?v=pbnQJsbWYNA&feature=youtu.be)
  - [Website](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/) 
 
@@ -53,6 +49,6 @@
   - [Password Generator](https://github.com/vishal2376/password-generator) 
 
 ## Contact :  
-  - [Instagram](https://www.instagram.com/vishal_2376/)
   - [Telegram](https://t.me/vishal2376/)
+  - [Instagram](https://www.instagram.com/vishal_2376/)
   - [Join Telegram group](https://t.me/cppwithtricks)

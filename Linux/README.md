@@ -13,15 +13,16 @@
 </p>
 
 
-## Prerequest
-  - espeak (for voice data)
+## What you need :
+  - espeak (for Text to speech)
+  - g++ (c++ compiler)
   
   ``` 
     sudo apt-get update
-    sudo apt-get install espeak
+    sudo apt-get install espeak g++
   ```  
 
-## Build instructions:
+## Build and Run instructions:
   
 ### Using makefile
 
@@ -31,6 +32,15 @@
     git clone https://github.com/vishal2376/virtual-assistant.git
     cd virtual-assistant/Linux
     make hydron
+  ```
+  - Run hydron application 
+
+  ```
+    ./hydron
+  ```
+  > If program is not executing then run the below command.
+  ```
+    chmod +777 hydron
   ```
 
 ## All Commands of virtual assistant[hydron] :

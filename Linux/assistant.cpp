@@ -18,17 +18,33 @@
 
 string greet;
 //--------------start---------------
-void assistant::start()
+void assistant::init()
 {
 	system("mkdir data");
 	system("clear");
-	// update_settings();
+	// load_settings();
 }
 
-//-----------update settings-------------
-void assistant::update_settings()
+//------------load user settings--------
+void assistant::load_settings()
 {
+	ifstream file;
+	file.open(".user-settings", ios::in);
+	if (file.good())
+	{
+		string name;
 
+		while (!file.eof())
+		{
+			getline(file, name);
+		}
+
+	}
+	else
+	{
+		cout << "do nothing";
+	}
+	file.close();
 }
 
 //----------greeting function--------------

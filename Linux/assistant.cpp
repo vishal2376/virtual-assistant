@@ -17,33 +17,37 @@
 #define t_const 1000
 
 string greet;
-//--------------constructor---------------
-assistant::assistant()
+//--------------start---------------
+void assistant::start()
 {
-  system("mkdir data");
-  system("clear");
+	system("mkdir data");
+	system("clear");
+	// update_settings();
+}
+
+//-----------update settings-------------
+void assistant::update_settings()
+{
 
 }
 
 //----------greeting function--------------
 void assistant::greeting()
 {
-  cout << "\n";
-  usleep(t_const * 300);
-  speak(greet);
-  usleep(t_const * 400);
+	cout << "\n";
+	usleep(t_const * 300);
+	speak(greet);
+	usleep(t_const * 400);
 }
 
 //--------------speak function--------------
 void assistant::speak(string s)
 {
-  string cmd = "espeak \"";
-  cmd += s;
-  cmd += "\"";
+	string cmd = "espeak \"";
+	cmd += s;
+	cmd += "\"";
 
-  system(cmd.c_str());
-
-  // thread th(system, cmd.c_str());
+	system(cmd.c_str());
 
 }
 
@@ -51,54 +55,47 @@ void assistant::speak(string s)
 void assistant::typing(string t)
 {
 
-  thread th(&assistant::speak, this , t); //using thread for TTS
+	thread th(assistant::speak, t); //using thread for TTS
 
-  for (int i = 0; t[i] != '\0'; i++)
-  {
-    cout << t[i] << flush;
-    usleep(40000); // speed 30ms
-  }
+	for (int i = 0; t[i] != '\0'; i++)
+	{
+		cout << t[i] << flush;
+		usleep(40000); // speed 40ms
+	}
 
-  th.join();//finish thread after complete TTS (text to speech)
+	th.join();//finish thread after complete TTS (text to speech)
 }
 
 //-------------------clock function--------------
-void assistant::clock()
+void assistant::local_clock()
 {
-  string DAYS[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-  string numDesc[] = {"th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th"};
-  string monthDesc[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+	string day[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+	string day_no[] = {"th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th"};
+	string month[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
-  cout << std::boolalpha;
-  time_t now = time(0);
-  tm*ltm = localtime(&now);
-  if (ltm->tm_hour < 12)
-    greet = "Good morning";
-  else if (ltm->tm_hour >= 12)
-    if (ltm->tm_hour > 16)
-      greet = "Good evening";
-    else
-      greet = "Good Afternoon";
+	time_t now = time(0);
 
-  cout << "   " << monthDesc[ltm->tm_mon];
-  cout << " " << ltm->tm_mday << numDesc[ltm->tm_mday % 10];
-  cout << " " << ltm->tm_year + 1900 ;
-  if (DAYS[ltm->tm_wday] == "Monday")
-    cout << " (Sunday)";
-  else
-    cout << " (" << DAYS[ltm->tm_wday - 1] << ")";
-  greet += " Vishal";
-  cout << "\t\t\t\t\t";
-  cout << greet;
-  cout << "\n   Time:-" << ( ltm->tm_hour <= 12 ? ltm->tm_hour : ltm->tm_hour - 12);
-  cout << ":" << ltm->tm_min << (ltm->tm_hour < 12 ? "am" : "pm");
+	tm *l_time = localtime(&now);
 
-}
+	if (l_time->tm_hour < 12)
+		greet = "Good morning";
+	else if (l_time->tm_hour >= 12)
+		if (l_time->tm_hour > 16)
+			greet = "Good evening";
+		else
+			greet = "Good Afternoon";
 
-
-
-
-assistant::~assistant()
-{
+	cout << "   " << month[l_time->tm_mon];
+	cout << " " << l_time->tm_mday << day_no[l_time->tm_mday % 10];
+	cout << " " << l_time->tm_year + 1900 ;
+	if (day[l_time->tm_wday] == "Monday")
+		cout << " (Sunday)";
+	else
+		cout << " (" << day[l_time->tm_wday - 1] << ")";
+	greet += " Vishal";
+	cout << "\t\t\t\t\t";
+	cout << greet;
+	cout << "\n   Time:-" << ( l_time->tm_hour <= 12 ? l_time->tm_hour : l_time->tm_hour - 12);
+	cout << ":" << l_time->tm_min << (l_time->tm_hour < 12 ? "am" : "pm");
 
 }

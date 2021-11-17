@@ -27,17 +27,25 @@
 
 using namespace std;
 
-class assistant
+// namespace settings
+// {
+// string u_name;
+// int s_speed; //speaking speed rate
+// int s_volume;
+// int s_pitch;
+
+// int t_speed; //typing speed
+// }
+
+
+namespace assistant
 {
-
-public:
-  assistant();
-  ~assistant();
-  void greeting();
-  void typing(string);
-  void clock();
-  void speak(string);
-
-};
+void start();
+void greeting();
+void typing(string);
+void local_clock();
+void speak(string);
+void update_settings();
+}
 
 #endif // ASSISTANT_H

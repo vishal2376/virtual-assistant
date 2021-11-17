@@ -55,8 +55,6 @@ int main()
 //-----------------------------Repeat function-------------------------//
 void repeat()
 {
-  // using namespace assistant;
-
   // system("color a");
   system("clear");
   local_clock();

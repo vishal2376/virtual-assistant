@@ -44,14 +44,14 @@ void lists(string);   //show song list
 void convert(string&);   //convert 'space( )' to 'underscore'( _ ) and lowercase string
 void srch(string, string extra = "");
 void update_song(string);   //copy song name from different files(list.txt) file into one file(songs.txt)
-
+void settings(); // user settings
 
 int main()
 {
 	init(); // init hydron
 
 	user_name = get_uname();
-	save_settings("singh", 160, 100, 30, 20);
+
 	repeat();
 
 	return 0;
@@ -122,7 +122,8 @@ void check()
 		usleep(t_const * 600);
 		cout << "\n\n\n\n\n\n\t\t\t\t\t";
 		typing("Created By : Vishal Singh");
-		usleep(t_const * 1500);
+		usleep(t_const * 1000);
+		system("clear");
 		exit(1);
 	}
 	else if (input == "find ip" || input == "find my ip" || m_word == "ip")
@@ -163,6 +164,9 @@ void check()
 			srch(input);
 	}
 
+	else if (input == "settings" || input == "setting" || input == "set")
+		settings();
+
 	else if (m_word == "song" || m_word == "music")
 		srch(s_word, "song");
 
@@ -184,6 +188,9 @@ void check()
 		usleep(t_const * 300);
 	}
 
+	else if (input == "help")
+		help();
+
 	else if (m_word == "movie")
 		srch(s_word, "movie");
 
@@ -192,9 +199,6 @@ void check()
 
 	else if (m_word == "search")
 		srch(s_word);
-
-	else if (input == "help")
-		help();
 
 	else if (m_word == "cmd")
 		system(s_word.c_str());
@@ -241,6 +245,7 @@ void check()
 		else
 			openf(s_word);
 	}
+
 	else
 	{
 		speak("Sorry " + user_name + ", unknown command...");
@@ -260,6 +265,37 @@ void check()
 
 	usleep(t_const * 700);
 	repeat();
+}
+
+//-----------------------user settings---------------------
+void settings()
+{
+	string un;
+	int ss, sa, sp, ts;
+
+	cout << "\n\n";
+	typing("Enter data in the following given format:\n");
+	cout << "\nuser name(single word only)";
+	cout << "\nspeak speed(in WPM)";
+	cout << "\nspeak volume(0-200)";
+	cout << "\nspeak pitch(0-99)";
+	cout << "\ntyping speed(in ms)";
+	cout << "\n\nExample 1:\n";
+	cout << "Vishal 160 100 40 40";
+	cout << "\n\nExample 2:\n";
+	cout << "Vishal 150 120 60 30";
+	cout << "\n\n\n---> ";
+	cin >> un >> ss >> sa >> sp >> ts;
+	if ((sa <= 200 && sa > 0) && (sp <= 99 && sp > 0 ))
+	{
+		save_settings(un, ss, sa, sp, ts);
+		speak("Restart hydron to see changes");
+	}
+	else
+	{
+		speak("Something went wrong");
+	}
+	cin.ignore('\n');
 }
 
 //------------------------------player function------------------------//

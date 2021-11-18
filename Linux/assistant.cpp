@@ -86,7 +86,7 @@ void assistant::load_settings()
 	file.close();
 }
 
-void assistant::save_settings(string un, int ss, int sa, int sp, int ts)
+void assistant::save_settings(string un = "Vishal", int ss = 160, int sa = 100, int sp = 40, int ts = 40)
 {
 	ofstream file;
 	file.open(".user-settings", ios::out);

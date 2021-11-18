@@ -32,6 +32,7 @@ namespace assistant
 {
 void init();
 
+void banner();
 void greeting();
 void local_clock();
 

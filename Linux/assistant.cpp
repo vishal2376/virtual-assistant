@@ -23,7 +23,31 @@ void assistant::init()
 	system("mkdir data");
 	system("clear");
 	// load_settings();
+	local_clock();
+	system("clear");
+	banner();
+	greeting();
 }
+
+//---------------banner----------------
+void assistant::banner()
+{
+	system("clear");
+	cout << "\n\n\n\n";
+	cout << "\n\t\t\t██╗  ██╗██╗   ██╗██████╗ ██████╗  ██████╗ ███╗   ██╗";
+	usleep(t_const * 50);
+	cout << "\n\t\t\t██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██╔═══██╗████╗  ██║";
+	usleep(t_const * 50);
+	cout << "\n\t\t\t███████║ ╚████╔╝ ██║  ██║██████╔╝██║   ██║██╔██╗ ██║";
+	usleep(t_const * 50);
+	cout << "\n\t\t\t██╔══██║  ╚██╔╝  ██║  ██║██╔══██╗██║   ██║██║╚██╗██║";
+	usleep(t_const * 50);
+	cout << "\n\t\t\t██║  ██║   ██║   ██████╔╝██║  ██║╚██████╔╝██║ ╚████║";
+	usleep(t_const * 50);
+	cout << "\n\t\t\t╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝";
+	usleep(t_const * 50);
+}
+
 
 //------------load user settings--------
 void assistant::load_settings()

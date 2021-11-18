@@ -81,7 +81,7 @@ void assistant::load_settings()
 		s_speed = 160;
 		s_pitch = 40;
 		s_volume = 100;
-		t_speed = 10;
+		t_speed = 40;
 	}
 	file.close();
 }
@@ -125,6 +125,12 @@ void assistant::typing(string t)
 	}
 
 	th.join();//finish thread after complete TTS (text to speech)
+}
+
+//-----------return user name-----------
+string assistant::get_uname()
+{
+	return u_name;
 }
 
 //-------------------clock function--------------

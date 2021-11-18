@@ -40,6 +40,7 @@ void local_clock();
 void typing(string);
 void speak(string);
 
+string get_uname();
 }
 
 #endif // ASSISTANT_H

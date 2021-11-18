@@ -573,5 +573,5 @@ void help()
   cout << setfill(' ') << setw(75) << "   10.exit/quit/q            \n";
   cout << setfill(' ') << setw(75) << "   11.shutdown/restart       \n";
   cout << setfill(' ') << setw(75) << "   12.install                \n";
-  usleep(t_const * 2500);
+  usleep(t_const * 3000);
 }

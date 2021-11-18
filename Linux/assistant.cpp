@@ -45,7 +45,7 @@ void assistant::banner()
 	cout << "\n\t\t\t██║  ██║   ██║   ██████╔╝██║  ██║╚██████╔╝██║ ╚████║";
 	usleep(t_const * 50);
 	cout << "\n\t\t\t╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝";
-	usleep(t_const * 50);
+	usleep(t_const * 500);
 }
 
 

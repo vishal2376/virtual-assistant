@@ -45,8 +45,8 @@ void update_song(string);   //copy song name from different files(list.txt) file
 
 int main()
 {
-  local_clock();
-  greeting();
+  init();
+
   repeat();
 
   return 0;
@@ -573,5 +573,5 @@ void help()
   cout << setfill(' ') << setw(75) << "   10.exit/quit/q            \n";
   cout << setfill(' ') << setw(75) << "   11.shutdown/restart       \n";
   cout << setfill(' ') << setw(75) << "   12.install                \n";
-  system("pause");
+  usleep(t_const * 2500);
 }

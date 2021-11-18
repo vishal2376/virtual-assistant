@@ -28,6 +28,18 @@
 using namespace std;
 
 
+//-------------global variables-------------
+
+string _uname = "Vishal";
+
+int _sspeed = 160; //speaking speed
+int _svolume = 100;
+int _spitch = 40;
+
+int _tspeed = 40; //typing speed
+
+
+//-------------main group--------------
 namespace assistant
 {
 void init();
@@ -41,16 +53,5 @@ void speak(string);
 
 void load_settings();
 }
-
-// namespace settings
-// {
-// string u_name = "Vishal";
-
-// // int s_speed; //speaking speed
-// // int s_volume;
-// // int s_pitch;
-
-// // int t_speed; //typing speed
-// }
 
 #endif // ASSISTANT_H

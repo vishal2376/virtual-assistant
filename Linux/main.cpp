@@ -45,7 +45,7 @@ void update_song(string);   //copy song name from different files(list.txt) file
 
 int main()
 {
-  init();
+  init(); // init hydron
 
   repeat();
 

@@ -25,6 +25,8 @@ int pos , l_pos, cnt = 0;
 string m_word , s_word;
 int s_count = 0;
 
+string user_name;
+
 //---------------------all functions-------------------------
 
 void check();   //compare the user input with defined commands
@@ -48,6 +50,7 @@ int main()
 {
 	init(); // init hydron
 
+	user_name = get_uname();
 	repeat();
 
 	return 0;
@@ -78,13 +81,13 @@ void check()
 {
 	if (m_word == "hi" || m_word == "hey" || m_word == "hello" || m_word == "hlo")
 	{
-		typing("Hi vishal, how can I help you..");
+		typing("Hi " + user_name + ", how can I help you..");
 	}
 	else if (m_word == "play")
 	{
 		if (input == "play" || input == "play " || s_word == " " || s_word == "  " || s_word == "   ")
 		{
-			speak("Sorry vishaal ,you does not enter song name");
+			speak("Sorry " + user_name + " ,you does not enter song name");
 			// tutorial("play");
 		}
 		else
@@ -114,7 +117,7 @@ void check()
 	}
 	else if (input == "exit" || input == "q" || input == "quit")
 	{
-		speak("Good bye, Vishaal");
+		speak("Good bye," + user_name);
 		usleep(t_const * 600);
 		cout << "\n\n\n\n\n\n\t\t\t\t\t";
 		typing("Created By : Vishal Singh");
@@ -152,13 +155,7 @@ void check()
 			typing("I am Hydron, a virtual assistant");
 			usleep(t_const * 300);
 			line();
-			typing("Vishal singh has made me.");
-			usleep(t_const * 300);
-			line();
 			typing("I was created on 27 December ,2018");
-			usleep(t_const * 300);
-			line();
-			typing("and he's making me better day by day");
 			usleep(t_const * 300);
 		}
 		else
@@ -245,7 +242,7 @@ void check()
 	}
 	else
 	{
-		speak("Sorry Vishaal, unknown command...");
+		speak("Sorry " + user_name + ", unknown command...");
 		cnt++;
 		if (cnt >= 3)
 		{	usleep(t_const * 600);

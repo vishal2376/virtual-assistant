@@ -40,6 +40,8 @@ void local_clock();
 void typing(string);
 void speak(string);
 
+void save_settings(string, int, int, int, int);
+
 string get_uname();
 }
 

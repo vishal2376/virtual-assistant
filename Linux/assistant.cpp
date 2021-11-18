@@ -71,7 +71,7 @@ void assistant::load_settings()
 
 		while (!file.eof())
 		{
-			getline(file, name);
+			file >> u_name >> s_speed >> s_volume >> s_pitch >> t_speed;
 		}
 
 	}
@@ -83,6 +83,16 @@ void assistant::load_settings()
 		s_volume = 100;
 		t_speed = 40;
 	}
+	file.close();
+}
+
+void assistant::save_settings(string un, int ss, int sa, int sp, int ts)
+{
+	ofstream file;
+	file.open(".user-settings", ios::out);
+
+	file << un << " " << ss << " "  << sa << " "  << sp << " "  << ts;
+
 	file.close();
 }
 

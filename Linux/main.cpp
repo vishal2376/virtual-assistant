@@ -51,6 +51,7 @@ int main()
 	init(); // init hydron
 
 	user_name = get_uname();
+	save_settings("singh", 160, 100, 30, 20);
 	repeat();
 
 	return 0;

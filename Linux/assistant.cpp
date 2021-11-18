@@ -16,18 +16,27 @@
 
 #define t_const 1000
 
+//------------global var----------------
 string greet;
+
+string u_name;
+int s_pitch;
+int s_speed;
+int s_volume;
+int t_speed;
+
 //--------------start---------------
 void assistant::init()
 {
 	system("mkdir data");
 	system("clear");
-	// load_settings();
+
+	load_settings();
 	local_clock();
-	system("clear");
 	banner();
 	greeting();
 }
+
 
 //---------------banner----------------
 void assistant::banner()
@@ -35,17 +44,19 @@ void assistant::banner()
 	system("clear");
 	cout << "\n\n\n\n";
 	cout << "\n\t\t\t██╗  ██╗██╗   ██╗██████╗ ██████╗  ██████╗ ███╗   ██╗";
-	usleep(t_const * 50);
+	usleep(t_const * 30);
 	cout << "\n\t\t\t██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██╔═══██╗████╗  ██║";
-	usleep(t_const * 50);
+	usleep(t_const * 30);
 	cout << "\n\t\t\t███████║ ╚████╔╝ ██║  ██║██████╔╝██║   ██║██╔██╗ ██║";
-	usleep(t_const * 50);
+	usleep(t_const * 30);
 	cout << "\n\t\t\t██╔══██║  ╚██╔╝  ██║  ██║██╔══██╗██║   ██║██║╚██╗██║";
-	usleep(t_const * 50);
+	usleep(t_const * 30);
 	cout << "\n\t\t\t██║  ██║   ██║   ██████╔╝██║  ██║╚██████╔╝██║ ╚████║";
-	usleep(t_const * 50);
+	usleep(t_const * 30);
 	cout << "\n\t\t\t╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝";
-	usleep(t_const * 500);
+	usleep(t_const * 30);
+	cout << "\n";
+	usleep(t_const * 100);
 }
 
 
@@ -66,7 +77,11 @@ void assistant::load_settings()
 	}
 	else
 	{
-		cout << "do nothing";
+		u_name = "Vishal";
+		s_speed = 160;
+		s_pitch = 40;
+		s_volume = 100;
+		t_speed = 10;
 	}
 	file.close();
 }
@@ -83,7 +98,13 @@ void assistant::greeting()
 //--------------speak function--------------
 void assistant::speak(string s)
 {
-	string cmd = "espeak \"";
+	string cmd = "espeak -a";
+	cmd += to_string(s_volume);
+	cmd += " -p";
+	cmd += to_string(s_pitch);
+	cmd += " -s";
+	cmd += to_string(s_speed);
+	cmd += " \"";
 	cmd += s;
 	cmd += "\"";
 
@@ -100,7 +121,7 @@ void assistant::typing(string t)
 	for (int i = 0; t[i] != '\0'; i++)
 	{
 		cout << t[i] << flush;
-		usleep(40000); // speed 40ms
+		usleep(t_const * t_speed); // speed 40ms
 	}
 
 	th.join();//finish thread after complete TTS (text to speech)
@@ -132,7 +153,8 @@ void assistant::local_clock()
 		cout << " (Sunday)";
 	else
 		cout << " (" << day[l_time->tm_wday - 1] << ")";
-	greet += " Vishal";
+	greet += " ";
+	greet += u_name;
 	cout << "\t\t\t\t\t";
 	cout << greet;
 	cout << "\n   Time:-" << ( l_time->tm_hour <= 12 ? l_time->tm_hour : l_time->tm_hour - 12);

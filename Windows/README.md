@@ -15,18 +15,7 @@
 
 ## Build instructions:
   
-### 1. Using makefile
-
-  - Type the following command in **CMD**.
-  
-  ```
-    git clone https://github.com/vishal2376/virtual-assistant.git
-    cd virtual-assistant/Windows
-    make hydron
-  ```
-
-
-### 2. Using Codeblocks 
+### 1. Using Codeblocks 
 
   - First install [Codeblocks](https://www.codeblocks.org/downloads/binaries/)  
   - Now Dowload files OR type the following command in ** CMD / Git bash**.

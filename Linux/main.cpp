@@ -275,11 +275,11 @@ void settings()
 
 	cout << "\n\n";
 	typing("Enter data in the following given format:\n");
-	cout << "\nuser name(single word only)";
-	cout << "\nspeak speed(in WPM)";
-	cout << "\nspeak volume(0-200)";
-	cout << "\nspeak pitch(0-99)";
-	cout << "\ntyping speed(in ms)";
+	cout << "\n1.user name(single word only)";
+	cout << "\n2.speak speed(in WPM)";
+	cout << "\n3.speak volume(0-200)";
+	cout << "\n4.speak pitch(0-99)";
+	cout << "\n5.typing speed(in ms)";
 	cout << "\n\nExample 1:\n";
 	cout << "Vishal 160 100 40 40";
 	cout << "\n\nExample 2:\n";
@@ -289,7 +289,7 @@ void settings()
 	if ((sa <= 200 && sa > 0) && (sp <= 99 && sp > 0 ))
 	{
 		save_settings(un, ss, sa, sp, ts);
-		speak("Restart hydron to see changes");
+		typing("Restart hydron to see changes");
 	}
 	else
 	{

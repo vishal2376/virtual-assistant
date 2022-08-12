@@ -46,17 +46,17 @@
 ## All Commands of virtual assistant[hydron] :
  - [Click here](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/#commands) 
 
-## Watch tutorial on : 
+## Watch tutorial on :
  - [Youtube](https://www.youtube.com/watch?v=pbnQJsbWYNA&feature=youtu.be)
  - [Website](https://codervishal.wordpress.com/2020/08/05/hydron-virtual-assistant/) 
 
-## More projects : 
+## More projects :
    
   - [Website Designs](https://github.com/vishal2376/Website-Design)
   - [C++ Mini Projects](https://github.com/vishal2376/cpp-mini-projects) 
   - [Password Generator](https://github.com/vishal2376/password-generator) 
 
-## Contact :  
+## Contact :
   - [Instagram](https://www.instagram.com/vishal_2376/)
   - [Telegram](https://t.me/vishal2376/)
   - [Join Telegram group](https://t.me/cppwithtricks)
